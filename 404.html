@@ -19,12 +19,15 @@ html {
 		  font-size: medium;
 }
 
-.error {
+.wrap {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
+}
+
+.error {
     text-align: center;
   -webkit-animation: noise-3 1s linear infinite;
           animation: noise-3 1s linear infinite;
@@ -172,15 +175,6 @@ html {
   43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
 }
 
-.wrap {
-  top: 30%;
-  left: 25%;
-  
-  height: 200px;
-  
-  margin-top: -100px;
-  position: absolute;
-}
 code {
   color: white;
 }
@@ -201,7 +195,7 @@ span.green {
 <script src=""></script>
 <body>
 <div class="wrap">
-<div class="error">
+<div class="error"></div>
 <div class="404">
 <pre><code>
 <span class="green">&lt;!</span><span>DOCTYPE html</span><span class="green">&gt;</span>
@@ -220,7 +214,6 @@ span.green {
 <span class="orange">&lt;/html&gt;</span>
 </span></code>
 <div class="file"></div>
-</div>
 </div>
 </body>
 </html>

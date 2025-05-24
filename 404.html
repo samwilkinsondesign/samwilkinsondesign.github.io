@@ -6,8 +6,7 @@
 <meta name="description" content="An experimental portfolio" />
 <meta name="keywords" content="sam wilkinson, design, designer, ui, ux" />
 <meta name="author" content="Sam Wilkinson"/>
-<meta name="theme-color" content="#f9f5ff" media="(prefers-color-scheme: light)">
-<link rel="shortcut icon" href="https://samwilkinsondesign.github.io/favicon.70b46e3d.ico">
+<link rel="shortcut icon" href="https://samwilkinsondesign.github.io/favicon.2db4e4ca.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
@@ -15,7 +14,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 html {
-  background-color: #333;
+  background-color: #0f1011;
   color: white;
   overflow: hidden;
   height: 100%;
@@ -28,6 +27,7 @@ html {
 
 body {
   margin: 0;
+  font-family: "SF Pro Text",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .wrap {
@@ -41,189 +41,25 @@ body {
     height: 100vh;
 }
 
-.code {
-  -webkit-animation: noise-3 1s linear infinite;
-          animation: noise-3 1s linear infinite;
-  overflow: default;
+.mono {
+    font-family: 'Space Mono',monospace;
 }
 
-.error, .file {
-  position: relative;
-  width: calc(100vw - 4rem);
-  height: 120px;
+.heading {
+    font-size: clamp(6rem, 8vw, 16rem);
+    font-weight: 400;
+    line-height: 1.3;
 }
 
-.error:after {
-  content: 'Error 404';
-  font-family: 'Space Mono', monospace;
-  font-size: 5rem;
-  line-height: 5rem;
-  margin: auto;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  opacity: 0;
-  color: white;
-  -webkit-animation: noise-1 .2s linear infinite;
-          animation: noise-1 .2s linear infinite;
-}
-.error:before {
-  content: 'Error 404';
-  font-family: 'Space Mono', monospace;
-  font-size: 5rem;
-  line-height: 5rem;
-  margin: auto;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  opacity: 0;
-  color: white;
-  -webkit-animation: noise-2 .2s linear infinite;
-          animation: noise-2 .2s linear infinite;
+h2, p {
+    margin: 0 0 .5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
 }
 
-.info {
-  -webkit-animation: noise-3 1s linear infinite;
-          animation: noise-3 1s linear infinite;
-}
-
-.file:before {
-  content: 'file not found';
-  font-family: 'Space Mono', monospace;
-  font-size: 5rem;
-  line-height: 5rem;
-  text-align: center;
-  width: 800px; 
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  opacity: 0;
-  color: white;
-  -webkit-animation: noise-5 .2s linear infinite;
-          animation: noise-5 .2s linear infinite;
-}
-
-.file:after {
-  content: 'file not found';
-  font-family: 'Space Mono', monospace;
-  font-size: 5rem;
-  line-height: 5rem;
-  text-align: center;
-  width: 800px;
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  opacity: 0;
-  color: white;
-  -webkit-animation: noise-4 .2s linear infinite;
-          animation: noise-4 .2s linear infinite;
-}
-
-@-webkit-keyframes noise-1 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: -6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: 2px;}
-}
-
-@keyframes noise-1 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: -6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: 2px;}
-}
-
-@-webkit-keyframes noise-2 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: 6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: -2px;}
-}
-
-@keyframes noise-2 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; left: 6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; left: -2px;}
-}
-
-@-webkit-keyframes noise {
-  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}  
-  4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);}
-  43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);}
-}
-
-@keyframes noise {
-  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}  
-  4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);}
-  43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);}
-}
-
-@-webkit-keyframes noise-3 {
-  0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
-  4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);}
-  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
-}
-
-@keyframes noise-3 {
-  0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
-  4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);}
-  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
-}
-
-@-webkit-keyframes noise-4 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; right: -6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; right: 2px;}
-}
-
-@keyframes noise-4 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; right: -6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; right: 2px;}
-}
-
-@-webkit-keyframes noise-5 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; right: 6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; right: -2px;}
-}
-
-@keyframes noise-5 {
-  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
-  10% {opacity: .1;}
-  50% {opacity: .5; right: 6px;}
-  80% {opacity: .3;}
-  100% {opacity: .6; right: -2px;}
-}
-
-code {
-  color: white;
-}
-span.blue {
-  color: #5190c5;
-}
-span.grey {
-  color: #7a7a7a;
-}
-span.orange {
-  color: #ffc8a8;
-}
-span.green {
-  color: #33cc33;
-}
-span.purple {
-  color:#edbfca;
+.text {
+    margin-bottom: 2rem;
 }
 
 .button {
@@ -231,13 +67,13 @@ span.purple {
   pointer-events: auto;
   cursor: pointer;
   background-color: #ddd6f3;
-  background-image: linear-gradient(19deg,#ddd6f3,#edbfca 50%,#ffc8a8);
+  background-image: linear-gradient(224deg,#fec5fb 24%,#00bae2 96%);
   border-radius: 2rem;
-  padding: 0.5rem 2rem;
-  margin: 0.5rem;
+  padding: .5rem 1.5rem;
+  margin: 0;
   border: none;
-  font-family: 'Space Mono',monospace;
-  font-size: 1rem;
+  font-size: .875rem;
+  line-height: 2;
   color: white;
   white-space: nowrap;
 }
@@ -291,7 +127,7 @@ span.purple {
     text-align: center;
     white-space: nowrap;
     font-style: italic;
-    padding: 0.5rem 1rem;
+    padding: .5rem 1.5rem;
 }
 
 @keyframes marquee {
@@ -304,37 +140,31 @@ span.purple {
 	}
 }
 
+@media screen and (width >= 53em) {
+    p {
+        font-size: 1.125rem;
+    }
+}
+
 </style>
 <script src=""></script>
 <body>
 <div class="wrap">
-<div class="error"></div>
-<div class="code">
-<pre><code>
-<span class="orange">&lt;!</span><span>DOCTYPE html</span><span class="orange">&gt;</span>
-<span class="purple">&lt;html&gt;</span>
-<span class="purple">&lt;title&gt;</span>404 Page<span class="purple">&lt;/title&gt;</span>
-<span class="purple">&lt;body&gt;</span>
-ERROR 404!<br/>PAGE NOT FOUND!
-<span class="grey">&lt;!--The file you are looking for,<br/>is not where you think it is.--&gt;</span>
-<span class="info">
-<span class="purple">&lt;/body&gt;</span>      
-<span class="purple">&lt;/html&gt;</span>
-</span>
-</code></pre>
-</div>
-<a href="https://samwilkinsondesign.github.io/" class="button button--this">
-<span>Reroute</span>
+  <div class="text">
+    <h2 class="heading mono">404</h2>
+    <p>Page not found</p>
+  </div>
+<a href="https://samwilkinsondesign.github.io/" class="button button--this mono">
+<span>Return Home</span>
 <div class="marquee" aria-hidden="true">
 <div class="marquee__inner">
-<span>Reroute</span>
-<span>Reroute</span>
-<span>Reroute</span>
-<span>Reroute</span>
+<span>Return Home</span>
+<span>Return Home</span>
+<span>Return Home</span>
+<span>Return Home</span>
 </div>
 </div>
 </a>
-<div class="file"></div>
 </div> 
 </body>
 </html>

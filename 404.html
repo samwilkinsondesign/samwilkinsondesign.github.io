@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>404 Page</title>
+<meta name="description" content="An experimental portfolio" />
+<meta name="keywords" content="sam wilkinson, design, designer, ui, ux" />
+<meta name="author" content="Sam Wilkinson"/>
+<link rel="shortcut icon" href="https://samwilkinsondesign.github.io/favicon.2db4e4ca.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+html {
+  background-color: #0f1011;
+  color: white;
+  overflow: hidden;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+		  font-size: medium;
+}
+
+body {
+  margin: 0;
+  font-family: "SF Pro Text",-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.wrap {
+  display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mono {
+    font-family: 'Space Mono',monospace;
+}
+
+.heading {
+    font-size: clamp(6rem, 8vw, 16rem);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h2, p {
+    margin: 0 0 .5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.text {
+    margin-bottom: 2rem;
+}
+
+.button {
+  position: relative;
+  pointer-events: auto;
+  cursor: pointer;
+  background-color: #ddd6f3;
+  background-image: linear-gradient(45deg, #36f, #39f 24%, #cf9efa);
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  border: none;
+  font-size: .875rem;
+  line-height: 1;
+  color: white;
+  white-space: nowrap;
+}
+
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.button--this > span {
+	display: inline-block;
+}
+
+.button--this:hover > span {
+	opacity: 0;
+}
+
+.marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	--offset: 1rem;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	transform: translate3d(var(--move-initial), 0, 0);
+	animation: marquee 1s linear infinite;
+	animation-play-state: paused;
+	opacity: 0;
+}
+
+.button--this:hover .marquee__inner {
+	animation-play-state: running;
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+
+.marquee span {
+    text-align: center;
+    white-space: nowrap;
+    font-style: italic;
+    padding: 1rem 1.5rem;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate3d(var(--move-initial), 0, 0);
+	}
+
+	100% {
+		transform: translate3d(var(--move-final), 0, 0);
+	}
+}
+
+@media screen and (width >= 53em) {
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+</style>
+<script src=""></script>
+<body>
+<div class="wrap">
+  <div class="text">
+    <h2 class="heading mono">404</h2>
+    <p>Page not found</p>
+  </div>
+<a href="https://samwilkinsondesign.github.io/" class="button button--this mono">
+<span>Return Home</span>
+<div class="marquee" aria-hidden="true">
+<div class="marquee__inner">
+<span>Return Home</span>
+<span>Return Home</span>
+<span>Return Home</span>
+<span>Return Home</span>
+</div>
+</div>
+</a>
+</div> 
+</body>
+</html>

@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -541,8 +541,9 @@ ul {
 }
 
 .type__tag span {
-  color: #f9f5ff;
-  background-color: #251f37;
+  color: #f5f8fd;
+  background-color: #161a22;
+  border: 1px solid #232f43;
   border-radius: 2px;
   margin: .25rem .5rem .25rem 0;
   padding: .5rem .75rem;
@@ -837,7 +838,7 @@ ul {
 
 @media screen and (width >= 53em) {
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   h5, p, li {

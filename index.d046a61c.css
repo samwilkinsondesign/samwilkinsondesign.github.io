@@ -436,7 +436,7 @@ ul {
 .app__tag {
   color: #f5f8fd;
   background: #161a22;
-  border: 1px solid #232f43;
+  border: 1px solid #1f2939;
   border-radius: 2rem;
   align-items: center;
   margin: 0 .5rem .75rem 0;
@@ -543,7 +543,7 @@ ul {
 .type__tag span {
   color: #f5f8fd;
   background-color: #161a22;
-  border: 1px solid #232f43;
+  border: 1px solid #1f2939;
   border-radius: 2px;
   margin: .25rem .5rem .25rem 0;
   padding: .5rem .75rem;
